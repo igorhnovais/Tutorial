@@ -22,64 +22,64 @@ HASHTABLE
 
 hastable deixa o codigo mais perfomatico:
 
-                              function twoNumberSum(list, num){  // função de soma e ve se é igual o alvo               
-                                  let hashtable = {}                                
-                                  for(let i = 0; i < list.length; i++){        
-                                      hashtable[list[i]] = true;                      
-                                  }
+function twoNumberSum(list, num){  // função de soma e ve se é igual o alvo               
+    let hashtable = {}                                
+    for(let i = 0; i < list.length; i++){        
+        hashtable[list[i]] = true;                      
+    }
 
-                                  for(let i = 0; i < list.length; i++){        
-                                      let diff = num - list[i]                       
-                                      if(diff == num) {
-                                          continue; 
-                                      }
-                                      if(hashtable[diff]) {
-                                          return true; 
-                                      }
-                                  }
-                                  return false;                                
-                              }
-                              -------------------------------------------------
-                              function containsDuplicates(arr) { // ver se tem algum repetido e retornar true
-                                  let arrayElements = {};
-                                  for (let idx = 0; idx < arr.length; idx++) {
-                                    if (arrayElements[arr[idx]] === true){
-                                      return true;
-                                    } 
-                                    arrayElements[arr[idx]] = true;
-                                  }
-                                  return false;
-                                }
-                                
-                                ----------------------------------------------------------------
-                                function countMostDuplicated(list){ // ver o elemento que mais aparece no array
-                                  const hashtable = {};
+    for(let i = 0; i < list.length; i++){        
+        let diff = num - list[i]                       
+        if(diff == num) {
+            continue; 
+        }
+        if(hashtable[diff]) {
+            return true; 
+        }
+    }
+    return false;                                
+}
+-------------------------------------------------
+function containsDuplicates(arr) { // ver se tem algum repetido e retornar true
+    let arrayElements = {};
+    for (let idx = 0; idx < arr.length; idx++) {
+    if (arrayElements[arr[idx]] === true){
+        return true;
+    } 
+    arrayElements[arr[idx]] = true;
+    }
+    return false;
+}
 
-                                  for(let i = 0; i < list.length; i++){
-                                  	const valor = list[i];
-                                    
-									if(hastable[valor]) === undefined{
-                                    	hashtable[valor] = 1 
-                                    } else {
-                                    	hashtable[valor]++
-                                    }
-                                  }	
-                                  
-                                  let contagemMaxima = 0;
-                                  let resposta = -1;
-                                  
-                                  for(let i = 0; i < list.length; i++){
-                                  	const valor = list[i]
-                                    const contagem = hashtable[valor]
-                                    
-                                    if(contagem > contagemMaxima){
-                                    	contagemMaxima = contagem
-                                        resposta = valor
-                                    }         
-                                  }
-                                  
-                                  return resposta;
-                                }
+----------------------------------------------------------------
+function countMostDuplicated(list){ // ver o elemento que mais aparece no array
+    const hashtable = {};
+
+    for(let i = 0; i < list.length; i++){
+    const valor = list[i];
+    
+    if(hastable[valor]) === undefined{
+        hashtable[valor] = 1 
+    } else {
+        hashtable[valor]++
+    }
+    }	
+    
+    let contagemMaxima = 0;
+    let resposta = -1;
+    
+    for(let i = 0; i < list.length; i++){
+    const valor = list[i]
+    const contagem = hashtable[valor]
+    
+    if(contagem > contagemMaxima){
+        contagemMaxima = contagem
+        resposta = valor
+    }         
+    }
+    
+    return resposta;
+}
     
     BUSCA BINARIA (const ordem = lst.sort( (a , b) => a - b);)
     
