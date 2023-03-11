@@ -45,6 +45,8 @@ app.listen(5000, () => {
 npm i express node-fetch redis redis-cli
 
 npm i -D nodemon
+
+roda o mongo se tiver no mongo e o redis(sudo service redis-server start // redis-cli)
   
 .env  
 MONGO_URI = mongodb://localhost:27017
